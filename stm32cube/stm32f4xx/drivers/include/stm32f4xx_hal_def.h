@@ -53,8 +53,9 @@ typedef enum
 } HAL_LockTypeDef;
 
 /* Exported macro ------------------------------------------------------------*/
-
-#define UNUSED(X) (void)X      /* To avoid gcc/g++ warnings */
+#ifndef UNUSED
+  #define UNUSED(X) (void)X      /* To avoid gcc/g++ warnings */
+#endif
 
 #define HAL_MAX_DELAY      0xFFFFFFFFU
 
